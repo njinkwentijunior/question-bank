@@ -1,0 +1,1 @@
+web: gunicorn question_bank.wsgi --log-file -
