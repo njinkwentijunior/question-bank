@@ -1,0 +1,15 @@
+<h1>Generate Exam</h1>
+<form method="post">
+    {% csrf_token %}
+    <label for="category">Category:</label>
+    <select name="category" id="category">
+        {% for category in categories %}
+            <option value="{{ category.id }}">{{ category.name }}</option>
+        {% endfor %}
+    </select>
+    <br>
+    <label for="num_questions">Number of Questions:</label>
+    <input type="number" name="num_questions" id="num_questions" min="1" max="50">
+    <br>
+    <button type="submit">Generate Exam</button>
+</form>

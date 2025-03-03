@@ -1,0 +1,6 @@
+<h1>Exam: {{ exam.name }}</h1>
+<ul>
+    {% for question in exam.questions.all %}
+        <li>{{ question.text }}</li>
+    {% endfor %}
+</ul>
